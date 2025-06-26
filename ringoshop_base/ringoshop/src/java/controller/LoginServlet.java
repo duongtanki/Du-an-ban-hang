@@ -34,12 +34,14 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
+        String pass = (String)request.getParameter("pass");
         LoginDAO u = new LoginDAO();
         boolean check = false;
         check = u.checkLogin(user, pass);
-        if(u.checkLogin(user, pass)) {
-             request.getRequestDispatcher("Home.jsp").forward(request, response);
+        if(check) {
+            request.getRequestDispatcher("Home.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("ErrorLogin.html").forward(request, response);
         }
     }
 
