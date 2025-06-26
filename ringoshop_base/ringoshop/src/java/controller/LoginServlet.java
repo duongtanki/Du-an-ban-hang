@@ -36,10 +36,11 @@ public class LoginServlet extends HttpServlet {
         String user = request.getParameter("user");
         String pass = (String)request.getParameter("pass");
         LoginDAO u = new LoginDAO();
-        boolean check = false;
-        check = u.checkLogin(user, pass);
-        if(check) {
+        int role = u.checkLogin(user, pass);
+        if(role == 1) {
             request.getRequestDispatcher("Home.jsp").forward(request, response);
+        } else if (role == 2) {
+            request.getRequestDispatcher("Cart.jsp").forward(request, response);
         } else {
             request.getRequestDispatcher("ErrorLogin.html").forward(request, response);
         }
