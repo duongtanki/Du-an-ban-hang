@@ -11,13 +11,23 @@ package model;
 public class Login {
     private String username;
     private String password;
+    private int role;
 
     public Login() {
     }
 
-    public Login(String username, String password) {
+    public Login(String username, String password, int role) {
         this.username = username;
         this.password = password;
+        this.role = role;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 
     public String getUsername() {
@@ -38,6 +48,8 @@ public class Login {
 
     @Override
     public String toString() {
-        return "Login{" + "username=" + username + ", password=" + password + '}';
+        return "Login{" + "username=" + username + ", password=" + password + ", role=" + role + '}';
     }
+
+    
 }

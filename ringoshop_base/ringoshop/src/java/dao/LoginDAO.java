@@ -2,6 +2,7 @@ package dao;
 
 import jakarta.servlet.ServletException;
 import java.sql.SQLException;
+import model.*;
 
 /**
  *
@@ -9,9 +10,9 @@ import java.sql.SQLException;
  */
 public class LoginDAO extends MyDAO {
     
-    public int checkLogin (String xUser, String xPass) {
+    public Login checkLogin (String xUser, String xPass) {
         //boolean check = false;
-        int role = 0;
+        Login log = null;
         xSql = "select * from login WHERE username = ? AND password = ?";
         try {
             ps = con.prepareStatement(xSql);
@@ -20,13 +21,16 @@ public class LoginDAO extends MyDAO {
             rs = ps.executeQuery();
             //check = rs.next();
             while(rs.next()) {
-                role = rs.getInt("role");
+                String name = rs.getString("username");
+                String pass = rs.getString("password");
+                int role = rs.getInt("role");
+                log = new Login(name, pass, role);
             }
             ps.close();
         } catch(Exception e) {
             e.printStackTrace();
          }
-        return role;
+        return log;
     }
     
     public int isExit (String xUser) {

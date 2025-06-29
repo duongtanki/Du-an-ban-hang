@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
+import model.*;
 
 
 
@@ -37,14 +38,18 @@ public class LoginServlet extends HttpServlet {
         String user = request.getParameter("user");
         String pass = (String)request.getParameter("pass");
         LoginDAO u = new LoginDAO();
-        int role = u.checkLogin(user, pass);
-        if(role == 1) {
-            request.getRequestDispatcher("Cart.jsp").forward(request, response);
-        } else if (role == 2) {
+        Login log = u.checkLogin(user, pass);
+        if(log != null) {
             HttpSession session = request.getSession();
-            session.setAttribute("user", user); // hoặc user object nếu bạn có
-            request.getRequestDispatcher("Home.jsp").forward(request, response);
-        } else {
+            session.setAttribute("account", log);  // lưu cả object
+            if (log.getRole() == 1) {
+                request.getRequestDispatcher("Cart.jsp").forward(request, response);
+            } else {
+                session.setAttribute("user", user); // hoặc user object nếu bạn có
+                request.getRequestDispatcher("Home.jsp").forward(request, response);
+            }
+        }
+         else {
             request.setAttribute("mess", "Tên đăng nhập hoặc mật khẩu không đúng!");
             request.getRequestDispatcher("Login.jsp").forward(request, response);  
         }
