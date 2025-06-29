@@ -32,18 +32,19 @@
                 <jsp:include page="Left.jsp"></jsp:include>
 
                     <div class="col-sm-9">
-                        <div class="row">
-                        <c:forEach begin="1" end="6" var="o">
+                        <div class="row">                           
+                        <c:forEach items="${shoesList}" var="s">
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="https://www.chuphinhsanpham.vn/wp-content/uploads/2021/06/chup-hinh-giay-dincox-shoes-c-photo-studio-4.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="${s.image}" alt="${s.name}">
                                     <div class="card-body">
-                                        <h4 class="card-title show_txt"><a href="#" title="View Product">Giày adidas 2A</a></h4>
-                                        <p class="card-text show_txt">Giày đá bóng nam chính hãng Adidas Predator 18.4 FXG DB2007
-                                        </p>
+                                        <h4 class="card-title show_txt">
+                                            <a href="#" title="View Product">${s.name}</a>
+                                        </h4>
+                                        <p class="card-text show_txt">${s.description}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-danger btn-block">100 $</p>
+                                                <p class="btn btn-danger btn-block">${s.price} $</p>
                                             </div>
                                             <div class="col">
                                                 <a href="#" class="btn btn-success btn-block">Add to cart</a>
