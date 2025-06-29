@@ -1,7 +1,7 @@
 // src/main/java/com/ringoshop/dao/ShoeDAO.java
 package dao;
 
-import controller.Shoes;
+import controller.ShoesServlet;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,9 +14,9 @@ public interface ShoesDAO {
     PreparedStatement ps = null;
     ResultSet rs = null;
 
-    Shoes getShoesById(int id) throws SQLException;
+    ShoesServlet getShoesById(int id) throws SQLException;
 
-    List<Shoes> getAllShoes() throws SQLException;
+    List<ShoesServlet> getAllShoes() throws SQLException;
 
-    List<Shoes> searchShoes(String keyword, String brand, String category, String gender) throws SQLException;
+    List<ShoesServlet> searchShoes(String keyword, String brand, String category, String gender) throws SQLException;
 }
