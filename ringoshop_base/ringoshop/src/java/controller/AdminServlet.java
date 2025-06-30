@@ -9,7 +9,7 @@ import model.Admin;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/updateAdminProfile", "/changeAdminPassword"})
+@WebServlet(urlPatterns = {"/admin","/updateAdminProfile", "/changeAdminPassword"})
 public class AdminServlet extends HttpServlet {
 
     private final AdminDAO adminDAO = new AdminDAOImpl();
@@ -17,7 +17,7 @@ public class AdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("admin/Admin.jsp"); // Đảm bảo file này tồn tại
+        response.sendRedirect("Admin.jsp"); // Đảm bảo file này tồn tại
     }
 
     @Override
@@ -44,15 +44,15 @@ public class AdminServlet extends HttpServlet {
             if (updated) {
                 session.setAttribute("adminUsername", username);
                 session.setAttribute("adminPhone", phone);
-                response.sendRedirect("admin/Admin.jsp?update=success");
+                response.sendRedirect("Admin.jsp?update=success");
             } else {
-                response.sendRedirect("admin/Admin.jsp?update=fail");
+                response.sendRedirect("Admin.jsp?update=fail");
             }
 
         } else if (path.equals("/changeAdminPassword")) {
             Object adminIdObj = session.getAttribute("adminId");
             if (adminIdObj == null) {
-                response.sendRedirect("login.jsp");
+                response.sendRedirect("Login.jsp");
                 return;
             }
             int adminId = (int) adminIdObj;
@@ -68,15 +68,15 @@ public class AdminServlet extends HttpServlet {
                     admin.setPassword(newPassword);
                     boolean changed = adminDAO.updateAdminPassword(admin);
                     if (changed) {
-                        response.sendRedirect("admin/Admin.jsp?password=changed");
+                        response.sendRedirect("Admin.jsp?password=changed");
                     } else {
-                        response.sendRedirect("admin/Admin.jsp?password=fail");
+                        response.sendRedirect("Admin.jsp?password=fail");
                     }
                 } else {
-                    response.sendRedirect("admin/Admin.jsp?password=notmatch");
+                    response.sendRedirect("Admin.jsp?password=notmatch");
                 }
             } else {
-                response.sendRedirect("admin/Admin.jsp?password=wrongcurrent");
+                response.sendRedirect("Admin.jsp?password=wrongcurrent");
             }
         }
     }

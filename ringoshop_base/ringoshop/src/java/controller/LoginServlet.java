@@ -32,16 +32,16 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("adminPhone", admin.getPhone());
 
             // ✅ Dùng URL đúng tới JSP (đừng redirect vào servlet hoặc class)
-            response.sendRedirect(request.getContextPath() + "/admin/Admin.jsp");
+            response.sendRedirect(request.getContextPath() + "/Admin.jsp");
         } else {
             request.setAttribute("mess", "Tên đăng nhập hoặc mật khẩu không đúng");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("Admin.jsp");
     }
 }
