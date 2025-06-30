@@ -15,10 +15,12 @@
     <div class="card bg-light mb-3">
         <div class="card-header bg-success text-white text-uppercase">Last product</div>
         <div class="card-body">
-            <img class="img-fluid" src="https://image.yes24.vn/Upload/ProductImage/GmarketSport/2058803_L.jpg?width=550&height=550" />
-            <h5 class="card-title">Giày đi chơi tết</h5>
-            <p class="card-text">Comfortable Sports Shoes Men Athletic Outdoor Cushioning Sneakers for Walking&Jogging (EUR Size 39-48)</p>
-            <p class="bloc_left_price">100 $</p>
+            <c:if test="${not empty lastProduct}">
+                <img class="img-fluid" src="${lastProduct.image}" alt="${lastProduct.name}" />
+                <h5 class="card-title">${lastProduct.name}</h5>
+                <p class="card-text">${lastProduct.description}</p>
+                <p class="bloc_left_price">${lastProduct.price} $</p>
+            </c:if>
         </div>
     </div>
 </div>

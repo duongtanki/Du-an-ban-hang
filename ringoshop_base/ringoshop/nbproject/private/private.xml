@@ -3,17 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/controller/HomeServlet.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/controller/LoginServlet.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/ErrorLogin.html</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/dao/LoginDAO.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/dao/DBContext.java</file>
-            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/controller/Shoes.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Login.jsp</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/utils/DBConnection.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/model/Login.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/dao/MyDAO.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Home.jsp</file>
+            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Left.jsp</file>
+            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/controller/LeftServlet.java</file>
+            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Logout.jsp</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/model/Shoes.java</file>
+            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Menu.jsp</file>
+            <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/index.jsp</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Cart.jsp</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/src/java/dao/ShoesDAO.java</file>
             <file>file:/D:/%23FPT_Study/2025_SUM/PRJ301/New%20Folder/Du-an-ban-hang/ringoshop_base/ringoshop/web/Detail.jsp</file>

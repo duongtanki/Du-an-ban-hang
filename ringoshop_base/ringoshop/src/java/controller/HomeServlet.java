@@ -15,6 +15,11 @@ public class HomeServlet extends HttpServlet {
         throws ServletException, IOException {
         ShoesDAO dao = new ShoesDAO();
         List<Shoes> list = dao.getAllShoes();
+        
+        if (!list.isEmpty()) {
+            Shoes lastProduct = list.get(list.size() - 1);
+            request.setAttribute("lastProduct", lastProduct);
+        }
 
         request.setAttribute("shoesList", list);
         request.getRequestDispatcher("Home.jsp").forward(request, response);
