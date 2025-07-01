@@ -14,6 +14,15 @@
     </head>
     <body>
         <jsp:include page="Menu.jsp"></jsp:include>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Siêu thị giày chất lượng cao</h1>
+                <p class="lead text-muted mb-0">
+                    Uy tín tạo nên thương hiệu với hơn 10 năm cung cấp các sản phẩm giày nhập từ Trung Quốc
+                </p>
+            </div>
+        </section>
+        <!--
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -27,26 +36,28 @@
                     </div>
                 </div>
             </div>
+        -->
             <div class="container">
                 <div class="row">
                 <jsp:include page="Left.jsp"></jsp:include>
 
                     <div class="col-sm-9">
-                        <div class="row">
-                        <c:forEach begin="1" end="6" var="o">
+                        <div class="row">                           
+                        <c:forEach items="${shoesList}" var="s">
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="https://image.yes24.vn/Upload/ProductImage/thethaochinhang/2063162_L.jpg?width=550&height=550" alt="Card image cap">
+                                    <img class="card-img-top" src="${s.image}" alt="${s.name}">
                                     <div class="card-body">
-                                        <h4 class="card-title show_txt"><a href="#" title="View Product">Giày adidas 2A</a></h4>
-                                        <p class="card-text show_txt">Giày đá bóng nam chính hãng Adidas Predator 18.4 FXG DB2007
-                                        </p>
+                                        <h4 class="card-title show_txt">
+                                            <a href="detail?productId=${s.id}" title="View Product">${s.name}</a>
+                                        </h4>
+                                        <p class="card-text show_txt">${s.description}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-danger btn-block">100 $</p>
+                                                <p class="btn btn-danger btn-block">${s.price} $</p>
                                             </div>
                                             <div class="col">
-                                                <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                                <a href="cart?productId=${s.id}" class="btn btn-success btn-block">Add to cart</a>
                                             </div>
                                         </div>
                                     </div>

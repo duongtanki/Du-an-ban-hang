@@ -3,8 +3,8 @@
 -- Nếu database đã tồn tại, bạn có thể bỏ qua bước này hoặc dùng IF NOT EXISTS
 -- USE [master]; -- Chạy lệnh này nếu bạn đang ở một database khác
 -- GO
--- CREATE DATABASE ringoshop_database;
--- GO
+--CREATE DATABASE ringoshop_database;
+--GO
 
 -- Sau khi tạo, chọn database để làm việc
 USE ringoshop_database;
@@ -38,6 +38,15 @@ CREATE TABLE shoes (
     updated_at DATETIME DEFAULT GETDATE() -- Sửa: TIMESTAMP -> DATETIME, CURRENT_TIMESTAMP -> GETDATE()
     -- Lưu ý: Để updated_at tự động cập nhật khi có UPDATE, bạn cần tạo TRIGGER
 );
+
+CREATE TABLE login (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role INT NOT NULL CHECK (role IN (1, 2)) -- 1: admin, 2: user
+);
+
+
 GO
 
 -- TRIGGER để tự động cập nhật updated_at (tùy chọn nhưng được khuyến nghị cho SQL Server)
