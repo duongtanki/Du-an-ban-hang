@@ -28,10 +28,54 @@ public class ShoesDAO extends MyDAO{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //list.add(new Shoes(1,"a", "https://www.chuphinhsanpham.vn/wp-content/uploads/2021/06/chup-hinh-giay-dincox-shoes-c-photo-studio-4.jpg", 
-        //        100, "check", "desc"));
         return list;
     }
-
+    
+    public Shoes getShoes(int xId) {
+        Shoes s = new Shoes();
+        try {
+            String query = "SELECT * FROM shoes where id = ?";
+            ps = con.prepareStatement(query);
+            ps.setInt(1, xId);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                s = new Shoes(
+                    rs.getInt("id"),
+                    rs.getString("name"),
+                    rs.getString("main_image_url"),
+                    rs.getDouble("price"),
+                    rs.getString("title"),
+                    rs.getString("description")
+                );
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return s;
+    }
+    
+    public List<Shoes> getShoesByName(String xName) {
+        List<Shoes> list = new ArrayList<>();
+        try {
+            String query = "SELECT * FROM shoes where name like ?";
+            ps = con.prepareStatement(query);
+            ps.setString(1, "%" + xName + "%");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Shoes s = new Shoes(
+                    rs.getInt("id"),
+                    rs.getString("name"),
+                    rs.getString("main_image_url"),
+                    rs.getDouble("price"),
+                    rs.getString("title"),
+                    rs.getString("description")
+                );
+                list.add(s);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
     
 }

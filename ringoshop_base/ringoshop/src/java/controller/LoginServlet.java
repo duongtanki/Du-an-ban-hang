@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
                 request.getRequestDispatcher("Cart.jsp").forward(request, response);
             } else {
                 session.setAttribute("user", user); // hoặc user object nếu bạn có
-                request.getRequestDispatcher("Home.jsp").forward(request, response);
+                response.sendRedirect("home");
             }
         }
          else {
