@@ -49,7 +49,7 @@
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="p-2">
-                                                            <img src="https://canary.contestimg.wish.com/api/webimage/5da3d0b594a0f07fdec6c5ac-large.jpg?cache_buster=a2471ea62eba44e7c0b0f4d2b4c64681" alt="" width="70" class="img-fluid rounded shadow-sm">
+                                                            <img src="https://i8.amplience.net/i/jpl/jd_030664_a?v=1" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                             <div class="ml-3 d-inline-block align-middle">
                                                                 <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Winter Men's Snow Boots Plus Velvet</a></h5><span class="text-muted font-weight-normal font-italic"></span>
                                                             </div>
@@ -111,4 +111,4 @@
     </body>
 
 </html>
-</html>
+
