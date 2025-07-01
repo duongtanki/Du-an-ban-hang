@@ -3,22 +3,28 @@ package controller;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-
 import java.io.IOException;
 
-
+@WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        HttpSession session = request.getSession(false); // Lấy session hiện tại (nếu có)
+        
+        // Invalidate session
+        HttpSession session = request.getSession(false);
         if (session != null) {
-            session.invalidate(); // Xoá toàn bộ thông tin đăng nhập
+            session.invalidate();
         }
-
-        // Quay về trang đăng nhập sau khi logout
-        response.sendRedirect("Login.jsp");
+        
+        // Redirect to login page
+        response.sendRedirect(request.getContextPath() + "/Login.jsp");
+    }
+    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
     }
 }

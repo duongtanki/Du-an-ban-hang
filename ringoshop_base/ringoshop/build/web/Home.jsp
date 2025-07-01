@@ -36,7 +36,7 @@
                         <c:forEach begin="1" end="6" var="o">
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="https://image.yes24.vn/Upload/ProductImage/thethaochinhang/2063162_L.jpg?width=550&height=550" alt="Card image cap">
+                                    <img class="card-img-top" src="https://www.chuphinhsanpham.vn/wp-content/uploads/2021/06/chup-hinh-giay-dincox-shoes-c-photo-studio-4.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title show_txt"><a href="#" title="View Product">Giày adidas 2A</a></h4>
                                         <p class="card-text show_txt">Giày đá bóng nam chính hãng Adidas Predator 18.4 FXG DB2007
@@ -62,4 +62,3 @@
         <jsp:include page="Footer.jsp"></jsp:include>
     </body>
 </html>
-
