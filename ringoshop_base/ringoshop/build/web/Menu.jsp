@@ -28,7 +28,7 @@
                         </button>
                     </div>
                 </div>
-                <a class="btn btn-success btn-sm ml-3" href="show">
+                <a class="btn btn-success btn-sm ml-3" href="">
                     <i class="fa fa-shopping-cart"></i> Cart
                     <span class="badge badge-light">3</span>
                 </a>
@@ -59,9 +59,9 @@
 <!-- Banner section -->
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading">Siêu thị giày chất lượng cao</h1>
+        <h1 class="jumbotron-heading">best shoes</h1>
         <p class="lead text-muted mb-0">
-            Uy tín tạo nên thương hiệu với hơn 10 năm cung cấp các sản phẩm giày nhập từ Trung Quốc
+            shoes shoes shoesshoesheosehosehsoehos
         </p>
     </div>
 </section>

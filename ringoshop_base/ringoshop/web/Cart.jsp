@@ -16,6 +16,9 @@
     </head>
 
     <body>
+        <form action="checkout" method="post">
+            <input type="submit" value="🛒 Xác nhận đơn hàng">
+        </form>
         <jsp:include page="Menu.jsp"></jsp:include>
             <div class="shopping-cart">
                 <div class="px-4 px-lg-0">
